@@ -11,8 +11,14 @@ from typing import List, Optional, Dict, Any
 from open_deep_research.state import Section
 from langsmith import traceable
 
-tavily_client = TavilyClient()
-tavily_async_client = AsyncTavilyClient()
+os.environ["TAVILY_API_KEY"] = "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"
+api_key = os.getenv("TAVILY_API_KEY")
+print(f'############################## \n {api_key} \n #############################3')
+if not api_key:
+    raise ValueError("TAVILY_API_KEY is not set. Please set it before running the script.")
+
+tavily_client = TavilyClient(api_key=api_key)
+tavily_async_client = AsyncTavilyClient(api_key='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')
 
 
 def get_config_value(value):

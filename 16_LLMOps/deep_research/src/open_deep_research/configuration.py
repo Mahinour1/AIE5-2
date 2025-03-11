@@ -42,7 +42,7 @@ class Configuration:
     number_of_queries: int = 2 # Number of search queries to generate per iteration
     max_search_depth: int = 2 # Maximum number of reflection + search iterations
     planner_provider: PlannerProvider = PlannerProvider.OPENAI  # Defaults to Anthropic as provider
-    planner_model: str = "gpt-4o" # Defaults to claude-3-7-sonnet-latest
+    planner_model: str = "gpt-4o-mini" # Defaults to claude-3-7-sonnet-latest
     writer_provider: WriterProvider = WriterProvider.OPENAI # Defaults to Anthropic as provider
     writer_model: str = "gpt-4o-mini" # Defaults to claude-3-5-sonnet-latest
     search_api: SearchAPI = SearchAPI.TAVILY # Default to TAVILY
